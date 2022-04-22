@@ -2,26 +2,26 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 public abstract class HangHoa {
-    private int maHang;
+    private String maHang;
     private String tenHang;
     private double soLuongTonKho;
     private double donGia;
 
     public HangHoa(){}
 
-    public HangHoa(int maHang, String tenHang, double soLuongTonKho, double donGia) {
+    public HangHoa(String maHang, String tenHang, double soLuongTonKho, double donGia) {
         this.maHang = maHang;
         this.tenHang = tenHang;
         this.soLuongTonKho = soLuongTonKho;
         this.donGia = donGia;
     }
 
-    public int getMaHang() {
+    public String getMaHang() {
         return maHang;
     }
 
-    public void setMaHang(int maHang) {
-        if(maHang > 0){
+    public void setMaHang(String maHang) {
+        if(maHang != null){
             this.maHang = maHang;
         }else{
             System.out.println("Ma hang ko duoc de trong!!!");
@@ -64,15 +64,20 @@ public abstract class HangHoa {
         }
     }
 
+    public String getFileLine(){
+        return maHang + "," + tenHang + "," + donGia + "," +  soLuongTonKho;
+    }
+
     @Override
     public String toString() {
         Locale localeVN = new Locale("vi", "VN");
         NumberFormat tienViet = NumberFormat.getCurrencyInstance(localeVN);
         String str = tienViet.format(donGia);
-        return "HangHoa [donGia=" + donGia + ", maHang=" + maHang + ", soLuongTonKh=" + soLuongTonKho + ", tenHang="
-                + tenHang + "]";
+        return "\nDon Gia: " + donGia + " Ma Hang: " + maHang + " So Luong Ton Kho: " + soLuongTonKho + " Ten Hang: "
+                + tenHang;
     }
 
+    
     
 
     

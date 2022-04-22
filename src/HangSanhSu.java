@@ -8,17 +8,14 @@ public class HangSanhSu extends HangHoa{
         
     }
 
-    public HangSanhSu(String nhaSanXuat, Date ngayNhapKho) {
-        this.nhaSanXuat = nhaSanXuat;
-        this.ngayNhapKho = ngayNhapKho;
-    }
-
-    public HangSanhSu(int maHang, String tenHang, double soLuongTonKho, double donGia, String nhaSanXuat,
+    public HangSanhSu(String maHang, String tenHang, double soLuongTonKho, double donGia, String nhaSanXuat,
             Date ngayNhapKho) {
         super(maHang, tenHang, soLuongTonKho, donGia);
         this.nhaSanXuat = nhaSanXuat;
         this.ngayNhapKho = ngayNhapKho;
     }
+
+
 
     public String getNhaSanXuat() {
         return nhaSanXuat;
@@ -38,6 +35,6 @@ public class HangSanhSu extends HangHoa{
 
     @Override
     public String toString() {
-        return "HangSanhSu [ngayNhapKho=" + ngayNhapKho + ", nhaSanXuat=" + nhaSanXuat + "]";
+        return "-HANG SANH SU \nNgay Nhap Kho: " + ngayNhapKho + " Nha San Xuat: " + nhaSanXuat + super.toString();
     }
 }

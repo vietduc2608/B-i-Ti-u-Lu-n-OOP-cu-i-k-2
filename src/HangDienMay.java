@@ -6,16 +6,13 @@ public class HangDienMay extends HangHoa {
 
     }
 
-    public HangDienMay(int tGBH, double congSuat) {
-        this.tGBH = tGBH;
-        this.congSuat = congSuat;
-    }
-
-    public HangDienMay(int maHang, String tenHang, double soLuongTonKho, double donGia, int tGBH, double congSuat) {
+    public  HangDienMay(String maHang, String tenHang, double soLuongTonKho, double donGia, int tGBH, double congSuat) {
         super(maHang, tenHang, soLuongTonKho, donGia);
         this.tGBH = tGBH;
         this.congSuat = congSuat;
     }
+
+
 
     public int gettGBH() {
         return tGBH;
@@ -35,6 +32,6 @@ public class HangDienMay extends HangHoa {
 
     @Override
     public String toString() {
-        return "HangDienMay [congSuat=" + congSuat + ", tGBH=" + tGBH + "]";
+        return "-HANG DIEN MAY \nCong Suat: " + congSuat + "W" + " Thoi Gian Bao Hanh: " + tGBH + " thang" + super.toString();
     }
 }

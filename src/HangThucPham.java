@@ -9,20 +9,13 @@ public class HangThucPham extends HangHoa {
 
     }
 
-    public HangThucPham(Date ngaySanXuat, Date ngayHetHan, String nhaCungCap) {
-        this.ngaySanXuat = ngaySanXuat;
-        this.ngayHetHan = ngayHetHan;
-        this.nhaCungCap = nhaCungCap;
-    }
-
-    public HangThucPham(int maHang, String tenHang, double soLuongTonKho, double donGia, Date ngaySanXuat,
+    public HangThucPham(String maHang, String tenHang, double soLuongTonKho, double donGia, Date ngaySanXuat,
             Date ngayHetHan, String nhaCungCap) {
         super(maHang, tenHang, soLuongTonKho, donGia);
         this.ngaySanXuat = ngaySanXuat;
         this.ngayHetHan = ngayHetHan;
         this.nhaCungCap = nhaCungCap;
     }
-
 
 
     public Date getNgaySanXuat() {
@@ -64,8 +57,7 @@ public class HangThucPham extends HangHoa {
         SimpleDateFormat sf = new SimpleDateFormat("dd/MM/yyyy");
         String str1 = sf.format(ngayHetHan);
         String str2 = sf.format(ngaySanXuat);
-        return "HangThucPham [Ngay Het Han=" + str1 + ", \nNgay San Xuat=" + str2 + ", \nNha Cung Cap=" + nhaCungCap
-                + "]" + super.toString();
+        return  "-HANG THUC PHAM \nNgay Het Han: " + str1 + " Ngay San Xuat: " + str2 + " Nha Cung Cap: " + nhaCungCap + super.toString() ;
     }
     
 }
