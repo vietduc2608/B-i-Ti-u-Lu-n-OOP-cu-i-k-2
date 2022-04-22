@@ -147,19 +147,6 @@ public class DanhSachHangHoa {
     }
 
    
-    // public boolean kiemTraHSD(){
-    //     boolean isHetHan = false;//con han
-
-    //     if(this.ngayHetHan.before(new Date())){
-    //         isHetHan  = true;
-    //         System.out.println("Het han roi ! Dung an !!!!");
-    //     }else{
-    //         System.out.println("Con han su dung an di !!!!!");
-    //     }
-    //     return isHetHan;
-
-    // }
-
 
     public HangHoa timkiemHangHoa(String maHang) {
         HangHoa hh = null;
@@ -335,24 +322,5 @@ public class DanhSachHangHoa {
         }
     }
 
-    // public HangHoa timKiemHangHoa(String maHang) {
-    //     HangHoa hh = null;    
-    //     for (HangHoa hangHoa : dsHH) {
-    //         if (hangHoa.getMaHang().equalsIgnoreCase(maHang)) {
-    //             hh = hangHoa;
-    //             System.out.println(hangHoa);
-    //             break;
-    //         }
-    //         else
-    //         System.out.println(".....");
-    //     }
-    //     return hh;
-    // }
-    // public HangHoa timKiem(String maHang){
-    //     return (HangHoa) this.dsHH.stream().filter(danhSachHangHoa -> danhSachHangHoa.getMaHang().equals(maHang).finFirst().orElse(null));
-    // }
-
-     // public void show(){
-    //     this.dsHH.forEach(dsHH -> System.out.println(dsHH.toString()));
-    // }
+    
 }

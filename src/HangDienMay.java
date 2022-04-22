@@ -13,7 +13,6 @@ public class HangDienMay extends HangHoa {
     }
 
 
-
     public int gettGBH() {
         return tGBH;
     }
